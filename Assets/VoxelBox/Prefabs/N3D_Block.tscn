@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqy8883nikn3u"]
+
+[ext_resource type="Material" uid="uid://cpll1p47mybot" path="res://Assets/VoxelBox/Materials/M_Sand.tres" id="1_a8wes"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ejsjr"]
+
+[node name="N3D_Block" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_ejsjr")
+skeleton = NodePath("../../../..")
+surface_material_override/0 = ExtResource("1_a8wes")

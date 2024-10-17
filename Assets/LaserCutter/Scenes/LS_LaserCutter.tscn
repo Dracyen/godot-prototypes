@@ -1,0 +1,69 @@
+[gd_scene load_steps=11 format=3 uid="uid://cuk48c7clg5y2"]
+
+[ext_resource type="Script" path="res://Assets/LaserCutter/Scripts/LaserCutterGamemode.cs" id="1_mj0xm"]
+[ext_resource type="Material" uid="uid://nnshse7o6rkj" path="res://Assets/VoxelBox/Materials/M_Ground.tres" id="2_uve4x"]
+[ext_resource type="Script" path="res://Assets/LaserCutter/Scripts/FloatingMovementManager.cs" id="4_5qclx"]
+[ext_resource type="Material" uid="uid://ba8gfnxf21q3a" path="res://Assets/VoxelBox/Materials/M_Skybox.tres" id="4_tu125"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_cayjw"]
+bounce = 1.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_ejsjr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_glgf0"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_qh2kx"]
+flip_faces = true
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_nxg7i"]
+
+[sub_resource type="Environment" id="Environment_n3jxu"]
+background_mode = 2
+background_color = Color(0.937255, 0.937255, 0.937255, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.85098, 0.780392, 0.698039, 1)
+reflected_light_source = 2
+
+[node name="LevelParent" type="Node3D"]
+script = ExtResource("1_mj0xm")
+
+[node name="SB3D_Ground" type="StaticBody3D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_cayjw")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="SB3D_Ground"]
+transform = Transform3D(10, 0, 0, 0, 0.5, 0, 0, 0, 10, 0, -0.25, 0)
+material_override = ExtResource("2_uve4x")
+mesh = SubResource("BoxMesh_ejsjr")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SB3D_Ground"]
+transform = Transform3D(10, 0, 0, 0, 0.5, 0, 0, 0, 10, 0, -0.25, 0)
+shape = SubResource("BoxShape3D_glgf0")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.258819, 0.965926, 0, -0.965926, 0.258819, 5, 5, 5)
+
+[node name="MI3D_Skybox" type="MeshInstance3D" parent="."]
+transform = Transform3D(1000, 0, 0, 0, 1000, 0, 0, 0, 1000, 0, 0, 0)
+material_override = ExtResource("4_tu125")
+mesh = SubResource("SphereMesh_qh2kx")
+skeleton = NodePath("../..")
+
+[node name="CharacterBody3D" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mass = 20.0
+gravity_scale = 0.0
+can_sleep = false
+linear_damp_mode = 1
+linear_damp = 0.75
+angular_damp_mode = 1
+angular_damp = 0.75
+script = ExtResource("4_5qclx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+shape = SubResource("CapsuleShape3D_nxg7i")
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+environment = SubResource("Environment_n3jxu")
+fov = 90.0

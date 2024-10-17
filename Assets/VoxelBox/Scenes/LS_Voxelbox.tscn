@@ -1,0 +1,74 @@
+[gd_scene load_steps=14 format=3 uid="uid://2gk1clj1igde"]
+
+[ext_resource type="Script" path="res://Assets/VoxelBox/Scripts/SandboxGamemode.cs" id="1_qrj5q"]
+[ext_resource type="Script" path="res://Assets/VoxelBox/Scripts/VoxelVisualManager.cs" id="2_7xpma"]
+[ext_resource type="Script" path="res://Assets/VoxelBox/Scripts/GridManager.cs" id="2_iqiag"]
+[ext_resource type="Material" uid="uid://nnshse7o6rkj" path="res://Assets/VoxelBox/Materials/M_Ground.tres" id="3_d0vxp"]
+[ext_resource type="PackedScene" uid="uid://cqy8883nikn3u" path="res://Assets/VoxelBox/Prefabs/N3D_Block.tscn" id="3_huoho"]
+[ext_resource type="Script" path="res://Assets/VoxelBox/Scripts/Managers/MouseRaycastManager.cs" id="4_00trp"]
+[ext_resource type="Material" uid="uid://ba8gfnxf21q3a" path="res://Assets/VoxelBox/Materials/M_Skybox.tres" id="5_jtdsr"]
+[ext_resource type="Material" uid="uid://ijn1f12p10jm" path="res://Assets/VoxelBox/Materials/M_Highlight.tres" id="6_rim2e"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_cayjw"]
+bounce = 1.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_ejsjr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8fgla"]
+
+[sub_resource type="Environment" id="Environment_n3jxu"]
+background_mode = 2
+background_color = Color(0.937255, 0.937255, 0.937255, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.85098, 0.780392, 0.698039, 1)
+reflected_light_source = 2
+
+[sub_resource type="SphereMesh" id="SphereMesh_qh2kx"]
+flip_faces = true
+
+[node name="LevelParent" type="Node3D"]
+script = ExtResource("1_qrj5q")
+
+[node name="N3D_BlockParent" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -5)
+script = ExtResource("2_7xpma")
+
+[node name="SB3D_Ground" type="StaticBody3D" parent="." node_paths=PackedStringArray("highlight", "voxelVisualManager")]
+transform = Transform3D(10, 0, 0, 0, 0.5, 0, 0, 0, 10, 0, -0.25, 0)
+physics_material_override = SubResource("PhysicsMaterial_cayjw")
+script = ExtResource("2_iqiag")
+gridTotalSize = Vector3(10, 10, 10)
+highlight = NodePath("../MI3D_Highlight")
+gridOrigin = Vector3(-5, 0, -5)
+blockPrefab = ExtResource("3_huoho")
+voxelVisualManager = NodePath("../N3D_BlockParent")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="SB3D_Ground"]
+material_override = ExtResource("3_d0vxp")
+mesh = SubResource("BoxMesh_ejsjr")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SB3D_Ground"]
+transform = Transform3D(0.999, 0, 0, 0, 0.001, 0, 0, 0, 0.999, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_8fgla")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-4.2222e-08, -0.258819, 0.965926, -1.13133e-08, 0.965926, 0.258819, -1, 4.61853e-14, -4.37114e-08, 10, 5, 0)
+environment = SubResource("Environment_n3jxu")
+fov = 90.0
+script = ExtResource("4_00trp")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.258819, 0.965926, 0, -0.965926, 0.258819, 5, 5, 5)
+
+[node name="MI3D_Skybox" type="MeshInstance3D" parent="."]
+transform = Transform3D(1000, 0, 0, 0, 1000, 0, 0, 0, 1000, 0, 0, 0)
+material_override = ExtResource("5_jtdsr")
+mesh = SubResource("SphereMesh_qh2kx")
+skeleton = NodePath("../..")
+
+[node name="MI3D_Highlight" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.1, 0, 0, 0, 1, 0, 0.05, 0)
+material_override = ExtResource("6_rim2e")
+mesh = SubResource("BoxMesh_ejsjr")
+skeleton = NodePath("../..")

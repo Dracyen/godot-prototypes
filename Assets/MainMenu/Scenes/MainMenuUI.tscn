@@ -1,0 +1,89 @@
+[gd_scene load_steps=8 format=3 uid="uid://biy7w1tm78nbo"]
+
+[ext_resource type="Texture2D" uid="uid://ca8habjn8fdnj" path="res://Assets/General/Sprites/iconNormal.svg" id="1_lstpl"]
+[ext_resource type="Texture2D" uid="uid://868v2cf3ukld" path="res://Assets/General/Sprites/iconPressed.svg" id="2_ifbey"]
+[ext_resource type="Texture2D" uid="uid://b4cqa82utkgnq" path="res://Assets/General/Sprites/iconHovered.svg" id="3_6t7h3"]
+[ext_resource type="Script" path="res://Assets/MainMenu/Scripts/Tools/LevelButton.cs" id="4_45rkv"]
+[ext_resource type="PackedScene" uid="uid://2gk1clj1igde" path="res://Assets/VoxelBox/Scenes/LS_Voxelbox.tscn" id="5_yn377"]
+[ext_resource type="PackedScene" uid="uid://yyyqo61m0kes" path="res://Assets/MovementLevel/Scenes/LS_MovementTest.tscn" id="6_tq2df"]
+[ext_resource type="PackedScene" uid="uid://cuk48c7clg5y2" path="res://Assets/LaserCutter/Scenes/LS_LaserCutter.tscn" id="7_c456c"]
+
+[node name="CT_MainMenuUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.025
+anchor_top = 0.025
+anchor_right = 0.975
+anchor_bottom = 0.975
+grow_horizontal = 2
+grow_vertical = 2
+columns = 3
+
+[node name="LevelButton01" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture_normal = ExtResource("1_lstpl")
+texture_pressed = ExtResource("2_ifbey")
+texture_hover = ExtResource("3_6t7h3")
+script = ExtResource("4_45rkv")
+targetScene = ExtResource("5_yn377")
+
+[node name="Label" type="Label" parent="GridContainer/LevelButton01"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.112
+anchor_right = 1.0
+anchor_bottom = 1.339
+text = "VoxelBox"
+horizontal_alignment = 1
+
+[node name="LevelButton02" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture_normal = ExtResource("1_lstpl")
+texture_pressed = ExtResource("2_ifbey")
+texture_hover = ExtResource("3_6t7h3")
+script = ExtResource("4_45rkv")
+targetScene = ExtResource("6_tq2df")
+
+[node name="Label" type="Label" parent="GridContainer/LevelButton02"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.112
+anchor_right = 1.0
+anchor_bottom = 1.339
+text = "Simple Movement"
+horizontal_alignment = 1
+
+[node name="LevelButton03" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture_normal = ExtResource("1_lstpl")
+texture_pressed = ExtResource("2_ifbey")
+texture_hover = ExtResource("3_6t7h3")
+script = ExtResource("4_45rkv")
+targetScene = ExtResource("7_c456c")
+
+[node name="Label" type="Label" parent="GridContainer/LevelButton03"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.112
+anchor_right = 1.0
+anchor_bottom = 1.339
+text = "Laser Cutter"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="GridContainer/LevelButton01" to="GridContainer/LevelButton01" method="LoadScene"]
+[connection signal="pressed" from="GridContainer/LevelButton02" to="GridContainer/LevelButton02" method="LoadScene"]
+[connection signal="pressed" from="GridContainer/LevelButton03" to="GridContainer/LevelButton03" method="LoadScene"]

@@ -1,0 +1,151 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Dracyen\\Documents\\Projects\\Godot\\Prototypes\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6226ECFD-D822-4835-92A1-2CBDA91FD781}|3D Sand Prototype.csproj|C:\\Users\\Dracyen\\Documents\\Projects\\Godot\\Prototypes\\assets\\general\\scripts\\inputstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6226ECFD-D822-4835-92A1-2CBDA91FD781}|3D Sand Prototype.csproj|solutionrelative:assets\\general\\scripts\\inputstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6226ECFD-D822-4835-92A1-2CBDA91FD781}|3D Sand Prototype.csproj|c:\\users\\dracyen\\documents\\projects\\godot\\prototypes\\assets\\general\\scripts\\managers\\gamemodemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6226ECFD-D822-4835-92A1-2CBDA91FD781}|3D Sand Prototype.csproj|solutionrelative:assets\\general\\scripts\\managers\\gamemodemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6226ECFD-D822-4835-92A1-2CBDA91FD781}|3D Sand Prototype.csproj|C:\\Users\\Dracyen\\Documents\\Projects\\Godot\\Prototypes\\assets\\general\\scripts\\gameutilities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6226ECFD-D822-4835-92A1-2CBDA91FD781}|3D Sand Prototype.csproj|solutionrelative:assets\\general\\scripts\\gameutilities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6226ECFD-D822-4835-92A1-2CBDA91FD781}|3D Sand Prototype.csproj|C:\\Users\\Dracyen\\Documents\\Projects\\Godot\\Prototypes\\Assets\\MovementLevel\\Scripts\\MovementTestGamemode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6226ECFD-D822-4835-92A1-2CBDA91FD781}|3D Sand Prototype.csproj|solutionrelative:Assets\\MovementLevel\\Scripts\\MovementTestGamemode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6226ECFD-D822-4835-92A1-2CBDA91FD781}|3D Sand Prototype.csproj|C:\\Users\\Dracyen\\Documents\\Projects\\Godot\\Prototypes\\assets\\movementlevel\\scripts\\movementtestinputstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6226ECFD-D822-4835-92A1-2CBDA91FD781}|3D Sand Prototype.csproj|solutionrelative:assets\\movementlevel\\scripts\\movementtestinputstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6226ECFD-D822-4835-92A1-2CBDA91FD781}|3D Sand Prototype.csproj|C:\\Users\\Dracyen\\Documents\\Projects\\Godot\\Prototypes\\assets\\lasercutter\\scripts\\lasercuttergamemode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6226ECFD-D822-4835-92A1-2CBDA91FD781}|3D Sand Prototype.csproj|solutionrelative:assets\\lasercutter\\scripts\\lasercuttergamemode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6226ECFD-D822-4835-92A1-2CBDA91FD781}|3D Sand Prototype.csproj|C:\\Users\\Dracyen\\Documents\\Projects\\Godot\\Prototypes\\assets\\movementlevel\\scripts\\playermovementmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6226ECFD-D822-4835-92A1-2CBDA91FD781}|3D Sand Prototype.csproj|solutionrelative:assets\\movementlevel\\scripts\\playermovementmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6226ECFD-D822-4835-92A1-2CBDA91FD781}|3D Sand Prototype.csproj|C:\\Users\\Dracyen\\Documents\\Projects\\Godot\\Prototypes\\assets\\lasercutter\\scripts\\floatingmovementmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6226ECFD-D822-4835-92A1-2CBDA91FD781}|3D Sand Prototype.csproj|solutionrelative:assets\\lasercutter\\scripts\\floatingmovementmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 198,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GameUtilities.cs",
+              "DocumentMoniker": "C:\\Users\\Dracyen\\Documents\\Projects\\Godot\\Prototypes\\Assets\\General\\Scripts\\GameUtilities.cs",
+              "RelativeDocumentMoniker": "Assets\\General\\Scripts\\GameUtilities.cs",
+              "ToolTip": "C:\\Users\\Dracyen\\Documents\\Projects\\Godot\\Prototypes\\Assets\\General\\Scripts\\GameUtilities.cs",
+              "RelativeToolTip": "Assets\\General\\Scripts\\GameUtilities.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAwwDYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-12T17:00:09.217Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "InputState.cs",
+              "DocumentMoniker": "C:\\Users\\Dracyen\\Documents\\Projects\\Godot\\Prototypes\\Assets\\General\\Scripts\\InputState.cs",
+              "RelativeDocumentMoniker": "Assets\\General\\Scripts\\InputState.cs",
+              "ToolTip": "C:\\Users\\Dracyen\\Documents\\Projects\\Godot\\Prototypes\\Assets\\General\\Scripts\\InputState.cs",
+              "RelativeToolTip": "Assets\\General\\Scripts\\InputState.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-12T15:26:59.384Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GamemodeManager.cs",
+              "DocumentMoniker": "C:\\Users\\Dracyen\\Documents\\Projects\\Godot\\Prototypes\\Assets\\General\\Scripts\\Managers\\GamemodeManager.cs",
+              "RelativeDocumentMoniker": "Assets\\General\\Scripts\\Managers\\GamemodeManager.cs",
+              "ToolTip": "C:\\Users\\Dracyen\\Documents\\Projects\\Godot\\Prototypes\\Assets\\General\\Scripts\\Managers\\GamemodeManager.cs",
+              "RelativeToolTip": "Assets\\General\\Scripts\\Managers\\GamemodeManager.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-12T14:52:06.237Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MovementTestGamemode.cs",
+              "DocumentMoniker": "C:\\Users\\Dracyen\\Documents\\Projects\\Godot\\Prototypes\\Assets\\MovementLevel\\Scripts\\MovementTestGamemode.cs",
+              "RelativeDocumentMoniker": "Assets\\MovementLevel\\Scripts\\MovementTestGamemode.cs",
+              "ToolTip": "C:\\Users\\Dracyen\\Documents\\Projects\\Godot\\Prototypes\\Assets\\MovementLevel\\Scripts\\MovementTestGamemode.cs",
+              "RelativeToolTip": "Assets\\MovementLevel\\Scripts\\MovementTestGamemode.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-12T13:54:24.179Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MovementTestInputState.cs",
+              "DocumentMoniker": "C:\\Users\\Dracyen\\Documents\\Projects\\Godot\\Prototypes\\Assets\\MovementLevel\\Scripts\\MovementTestInputState.cs",
+              "RelativeDocumentMoniker": "Assets\\MovementLevel\\Scripts\\MovementTestInputState.cs",
+              "ToolTip": "C:\\Users\\Dracyen\\Documents\\Projects\\Godot\\Prototypes\\Assets\\MovementLevel\\Scripts\\MovementTestInputState.cs",
+              "RelativeToolTip": "Assets\\MovementLevel\\Scripts\\MovementTestInputState.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-12T14:47:27.045Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LaserCutterGamemode.cs",
+              "DocumentMoniker": "C:\\Users\\Dracyen\\Documents\\Projects\\Godot\\Prototypes\\Assets\\LaserCutter\\Scripts\\LaserCutterGamemode.cs",
+              "RelativeDocumentMoniker": "Assets\\LaserCutter\\Scripts\\LaserCutterGamemode.cs",
+              "ToolTip": "C:\\Users\\Dracyen\\Documents\\Projects\\Godot\\Prototypes\\Assets\\LaserCutter\\Scripts\\LaserCutterGamemode.cs",
+              "RelativeToolTip": "Assets\\LaserCutter\\Scripts\\LaserCutterGamemode.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-12T14:51:06.278Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PlayerMovementManager.cs",
+              "DocumentMoniker": "C:\\Users\\Dracyen\\Documents\\Projects\\Godot\\Prototypes\\Assets\\MovementLevel\\Scripts\\PlayerMovementManager.cs",
+              "RelativeDocumentMoniker": "Assets\\MovementLevel\\Scripts\\PlayerMovementManager.cs",
+              "ToolTip": "C:\\Users\\Dracyen\\Documents\\Projects\\Godot\\Prototypes\\Assets\\MovementLevel\\Scripts\\PlayerMovementManager.cs",
+              "RelativeToolTip": "Assets\\MovementLevel\\Scripts\\PlayerMovementManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-12T14:48:51.079Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FloatingMovementManager.cs",
+              "DocumentMoniker": "C:\\Users\\Dracyen\\Documents\\Projects\\Godot\\Prototypes\\Assets\\LaserCutter\\Scripts\\FloatingMovementManager.cs",
+              "RelativeDocumentMoniker": "Assets\\LaserCutter\\Scripts\\FloatingMovementManager.cs",
+              "ToolTip": "C:\\Users\\Dracyen\\Documents\\Projects\\Godot\\Prototypes\\Assets\\LaserCutter\\Scripts\\FloatingMovementManager.cs",
+              "RelativeToolTip": "Assets\\LaserCutter\\Scripts\\FloatingMovementManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-12-13T21:37:45.079Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
