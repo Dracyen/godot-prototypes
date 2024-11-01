@@ -1,13 +1,12 @@
 using Godot;
-using System;
 using System.Diagnostics;
-using LaserCutterUtilities;
+using HordeFighterUtilities;
 
-public partial class LaserCutterGamemode : Gamemode
+public partial class HordeFighterGamemode : Gamemode
 {
     public override void _Ready()
     {
-        ActiveInputState = new LaserCutterInputState();
+        ActiveInputState = new MovementTestInputState();
 
         GameActions.TogglePauseMenu += TogglePauseMenuImpl;
     }

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://biy7w1tm78nbo"]
+[gd_scene load_steps=9 format=3 uid="uid://biy7w1tm78nbo"]
 
 [ext_resource type="Texture2D" uid="uid://ca8habjn8fdnj" path="res://Assets/General/Sprites/iconNormal.svg" id="1_lstpl"]
 [ext_resource type="Texture2D" uid="uid://868v2cf3ukld" path="res://Assets/General/Sprites/iconPressed.svg" id="2_ifbey"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://2gk1clj1igde" path="res://Assets/VoxelBox/Scenes/LS_Voxelbox.tscn" id="5_yn377"]
 [ext_resource type="PackedScene" uid="uid://yyyqo61m0kes" path="res://Assets/MovementLevel/Scenes/LS_MovementTest.tscn" id="6_tq2df"]
 [ext_resource type="PackedScene" uid="uid://cuk48c7clg5y2" path="res://Assets/LaserCutter/Scenes/LS_LaserCutter.tscn" id="7_c456c"]
+[ext_resource type="PackedScene" uid="uid://te4b8p5t5fao" path="res://Assets/HordeFighter/Scenes/LS_HordeTest.tscn" id="8_ugey0"]
 
 [node name="CT_MainMenuUI" type="Control"]
 layout_mode = 3
@@ -84,6 +85,26 @@ anchor_bottom = 1.339
 text = "Laser Cutter"
 horizontal_alignment = 1
 
+[node name="LevelButton04" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture_normal = ExtResource("1_lstpl")
+texture_pressed = ExtResource("2_ifbey")
+texture_hover = ExtResource("3_6t7h3")
+script = ExtResource("4_45rkv")
+targetScene = ExtResource("8_ugey0")
+
+[node name="Label" type="Label" parent="GridContainer/LevelButton04"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.112
+anchor_right = 1.0
+anchor_bottom = 1.339
+text = "Horde Fighter"
+horizontal_alignment = 1
+
 [connection signal="pressed" from="GridContainer/LevelButton01" to="GridContainer/LevelButton01" method="LoadScene"]
 [connection signal="pressed" from="GridContainer/LevelButton02" to="GridContainer/LevelButton02" method="LoadScene"]
 [connection signal="pressed" from="GridContainer/LevelButton03" to="GridContainer/LevelButton03" method="LoadScene"]
+[connection signal="pressed" from="GridContainer/LevelButton04" to="GridContainer/LevelButton04" method="LoadScene"]

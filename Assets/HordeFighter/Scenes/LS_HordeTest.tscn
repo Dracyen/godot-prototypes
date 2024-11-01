@@ -1,0 +1,197 @@
+[gd_scene load_steps=27 format=3 uid="uid://te4b8p5t5fao"]
+
+[ext_resource type="Script" path="res://Assets/MovementLevel/Scripts/MovementTestGamemode.cs" id="1_fdynh"]
+[ext_resource type="Material" uid="uid://nnshse7o6rkj" path="res://Assets/VoxelBox/Materials/M_Ground.tres" id="2_o33tm"]
+[ext_resource type="Material" uid="uid://ba8gfnxf21q3a" path="res://Assets/VoxelBox/Materials/M_Skybox.tres" id="4_3wlhn"]
+[ext_resource type="Material" uid="uid://dtgepulbglkqq" path="res://Assets/HordeFighter/Materials/Enemy_1_Material.tres" id="4_dqlbi"]
+[ext_resource type="Script" path="res://Assets/HordeFighter/Scripts/HF_PlayerMovementManager.cs" id="4_p7mp3"]
+[ext_resource type="Animation" uid="uid://dfgutekg6lr4v" path="res://Assets/HordeFighter/Animations/idle_animation.res" id="5_gn6p6"]
+[ext_resource type="Animation" uid="uid://c0qbwe1qg6rki" path="res://Assets/HordeFighter/Animations/walk_animation.res" id="6_ou4ar"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_cayjw"]
+bounce = 1.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_ejsjr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_glgf0"]
+
+[sub_resource type="Environment" id="Environment_n3jxu"]
+background_mode = 2
+background_color = Color(0.937255, 0.937255, 0.937255, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.85098, 0.780392, 0.698039, 1)
+reflected_light_source = 2
+
+[sub_resource type="SphereMesh" id="SphereMesh_qh2kx"]
+flip_faces = true
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_rvu2f"]
+animation = &"idle_animation"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_7peh6"]
+animation = &"Walk_Animation"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_0v4hy"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_1kd3r"]
+advance_mode = 2
+advance_condition = &"is_idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_m2r4e"]
+advance_mode = 2
+advance_condition = &"is_walking"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_owjy4"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_12s27"]
+advance_mode = 2
+advance_condition = &"is_idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_kp82q"]
+advance_mode = 2
+advance_condition = &"is_walking"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_ebp32"]
+states/End/position = Vector2(438, 100)
+states/Start/position = Vector2(118, 100)
+states/idle_animation/node = SubResource("AnimationNodeAnimation_rvu2f")
+states/idle_animation/position = Vector2(280, 100)
+states/walk_animation/node = SubResource("AnimationNodeAnimation_7peh6")
+states/walk_animation/position = Vector2(280, 15)
+transitions = ["walk_animation", "End", SubResource("AnimationNodeStateMachineTransition_0v4hy"), "Start", "idle_animation", SubResource("AnimationNodeStateMachineTransition_1kd3r"), "idle_animation", "walk_animation", SubResource("AnimationNodeStateMachineTransition_m2r4e"), "idle_animation", "End", SubResource("AnimationNodeStateMachineTransition_owjy4"), "walk_animation", "idle_animation", SubResource("AnimationNodeStateMachineTransition_12s27"), "Start", "walk_animation", SubResource("AnimationNodeStateMachineTransition_kp82q")]
+graph_offset = Vector2(3, -63)
+
+[sub_resource type="Animation" id="Animation_7l5o2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CharacterBody3D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CharacterBody3D/Mesh_Body:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0.25, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CharacterBody3D/Mesh_Body:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sdepb"]
+_data = {
+"RESET": SubResource("Animation_7l5o2"),
+"idle_animation": ExtResource("5_gn6p6"),
+"walk_animation": ExtResource("6_ou4ar")
+}
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_he8j3"]
+material = ExtResource("4_dqlbi")
+height = 1.5
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_jip40"]
+height = 1.5
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_keytk"]
+material = ExtResource("4_dqlbi")
+radius = 0.225
+height = 0.75
+
+[node name="LevelParent" type="Node3D"]
+script = ExtResource("1_fdynh")
+
+[node name="SB3D_Ground" type="StaticBody3D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_cayjw")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="SB3D_Ground"]
+transform = Transform3D(10, 0, 0, 0, 0.5, 0, 0, 0, 10, 0, -0.25, 0)
+material_override = ExtResource("2_o33tm")
+mesh = SubResource("BoxMesh_ejsjr")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SB3D_Ground"]
+transform = Transform3D(10, 0, 0, 0, 0.5, 0, 0, 0, 10, 0, -0.25, 0)
+shape = SubResource("BoxShape3D_glgf0")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-4.2222e-08, -0.258819, 0.965926, -1.13133e-08, 0.965926, 0.258819, -1, 4.61853e-14, -4.37114e-08, 10, 5, 0)
+environment = SubResource("Environment_n3jxu")
+fov = 90.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.258819, 0.965926, 0, -0.965926, 0.258819, 5, 5, 5)
+
+[node name="MI3D_Skybox" type="MeshInstance3D" parent="."]
+transform = Transform3D(1000, 0, 0, 0, 1000, 0, 0, 0, 1000, 0, 0, 0)
+visible = false
+material_override = ExtResource("4_3wlhn")
+mesh = SubResource("SphereMesh_qh2kx")
+skeleton = NodePath("../..")
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." node_paths=PackedStringArray("m_AnimationTree")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+script = ExtResource("4_p7mp3")
+m_AnimationTree = NodePath("AnimationTree")
+
+[node name="AnimationTree" type="AnimationTree" parent="CharacterBody3D"]
+root_node = NodePath("../..")
+tree_root = SubResource("AnimationNodeStateMachine_ebp32")
+anim_player = NodePath("../AnimationPlayer")
+parameters/conditions/is_idle = false
+parameters/conditions/is_walking = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody3D"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_sdepb")
+}
+speed_scale = 2.0
+
+[node name="Mesh_Body" type="MeshInstance3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+mesh = SubResource("CapsuleMesh_he8j3")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+shape = SubResource("CylinderShape3D_jip40")
+
+[node name="Pivot_Left_Leg" type="Node3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 0.819152, -0.573576, 0, 0.573576, 0.819152, -0.265, -0.225, 0)
+
+[node name="Mesh_Left_Leg" type="MeshInstance3D" parent="CharacterBody3D/Pivot_Left_Leg"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.15, 0)
+mesh = SubResource("CapsuleMesh_keytk")
+skeleton = NodePath("../../../..")
+
+[node name="Pivot_Right_Leg" type="Node3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 0.422622, 0.906306, 0, -0.906306, 0.422622, 0.265, -0.225, 0)
+
+[node name="Mesh_Right_Leg" type="MeshInstance3D" parent="CharacterBody3D/Pivot_Right_Leg"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.15, 0)
+mesh = SubResource("CapsuleMesh_keytk")
+skeleton = NodePath("../../../..")

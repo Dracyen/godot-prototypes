@@ -15,7 +15,7 @@ public partial class GridManager : Node3D
 	[Export] MeshInstance3D highlight;
     [Export] Vector3 gridOrigin;
     [Export] PackedScene blockPrefab;
-    [Export] VoxelVisualManager voxelVisualManager;
+    [Export] Node nodeParent;
 
     BlockType[,,] gridTypes;
     MeshInstance3D[,,] gridNodes;
@@ -49,7 +49,7 @@ public partial class GridManager : Node3D
                     Node3D tempNode = (Node3D)ResourceLoader.Load<PackedScene>(blockPrefab.ResourcePath).Instantiate();
                     MeshInstance3D tempMesh = tempNode.GetChild<MeshInstance3D>(0);
 
-                    voxelVisualManager.AddChild(tempNode);
+                    nodeParent.AddChild(tempNode);
 
                     BlockType[] values = Data.Blocks.Keys.ToArray();
                     BlockType randomBlockType = values[rng.Next(values.Length)];
@@ -64,15 +64,11 @@ public partial class GridManager : Node3D
 
     public override void _Process(double delta)
     {
-        Debug.WriteLine("Frame Time: " + delta);
-
         if (timer < 1)
         {
             timer += delta;
             return;
         }
-
-        Debug.WriteLine("Starting Queue");
 
         for (int x = 0; x < gridTypes.GetLength(0); x++)
             for (int y = 0; y < gridTypes.GetLength(0); y++)
@@ -87,8 +83,6 @@ public partial class GridManager : Node3D
                 }
 
         timer = 0;
-
-        Debug.WriteLine("Finished Main");
     }
 
     public void UpdateGridSelection(Vector3 point)
@@ -106,8 +100,6 @@ public partial class GridManager : Node3D
 
     private void UpdateVoxel(Object stateInfo)
     {
-        Debug.WriteLine("Executing Queue");
-
         VoxelInfo info = (VoxelInfo)stateInfo;
 
         gridNodes[info.X, info.Y, info.Z].SetSurfaceOverrideMaterial(0, Data.Blocks[info.type]);

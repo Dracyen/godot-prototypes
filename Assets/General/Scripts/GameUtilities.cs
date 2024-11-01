@@ -88,3 +88,13 @@ namespace LaserCutterUtilities
         public static Action TogglePauseMenu;
     }
 }
+
+namespace HordeFighterUtilities
+{
+    public class GameActions
+    {
+        public static Action<Vector2> Move;
+
+        public static Action TogglePauseMenu;
+    }
+}

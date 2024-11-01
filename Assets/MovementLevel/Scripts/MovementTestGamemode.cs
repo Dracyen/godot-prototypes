@@ -1,6 +1,6 @@
 using Godot;
 using System.Diagnostics;
-using VoxelBoxUtilities;
+using MovementTestUtilities;
 
 public partial class MovementTestGamemode : Gamemode
 {

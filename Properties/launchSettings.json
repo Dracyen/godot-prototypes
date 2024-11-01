@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "3D Sand Prototype": {
+      "commandName": "Project"
+    },
+    "Prototype Debug": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Program Files\\Godot v4.3\\Godot_v4.3-stable_mono_win64.exe",
+      "commandLineArgs": "--path . --verbose",
+      "workingDirectory": ".",
+      "nativeDebugging": true
+    }
+  }
+}
