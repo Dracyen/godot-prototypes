@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Dracyen\\Documents\\Projects\\Godot\\Prototypes\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6226ECFD-D822-4835-92A1-2CBDA91FD781}|3D Sand Prototype.csproj|c:\\users\\dracyen\\documents\\projects\\godot\\prototypes\\assets\\hordefighter\\scripts\\groundedmovementmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6226ECFD-D822-4835-92A1-2CBDA91FD781}|3D Sand Prototype.csproj|solutionrelative:assets\\hordefighter\\scripts\\groundedmovementmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6226ECFD-D822-4835-92A1-2CBDA91FD781}|3D Sand Prototype.csproj|c:\\users\\dracyen\\documents\\projects\\godot\\prototypes\\assets\\voxelbox\\scripts\\sandboxgamemode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6226ECFD-D822-4835-92A1-2CBDA91FD781}|3D Sand Prototype.csproj|solutionrelative:assets\\voxelbox\\scripts\\sandboxgamemode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,85 +15,43 @@
       "RelativeMoniker": "D:0:0:{6226ECFD-D822-4835-92A1-2CBDA91FD781}|3D Sand Prototype.csproj|solutionrelative:assets\\hordefighter\\scripts\\hordefighterinputstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6226ECFD-D822-4835-92A1-2CBDA91FD781}|3D Sand Prototype.csproj|c:\\users\\dracyen\\documents\\projects\\godot\\prototypes\\assets\\general\\scripts\\gameutilities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6226ECFD-D822-4835-92A1-2CBDA91FD781}|3D Sand Prototype.csproj|solutionrelative:assets\\general\\scripts\\gameutilities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6226ECFD-D822-4835-92A1-2CBDA91FD781}|3D Sand Prototype.csproj|c:\\users\\dracyen\\documents\\projects\\godot\\prototypes\\assets\\hordefighter\\scripts\\hordefightergamemode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6226ECFD-D822-4835-92A1-2CBDA91FD781}|3D Sand Prototype.csproj|solutionrelative:assets\\hordefighter\\scripts\\hordefightergamemode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6226ECFD-D822-4835-92A1-2CBDA91FD781}|3D Sand Prototype.csproj|c:\\users\\dracyen\\documents\\projects\\godot\\prototypes\\assets\\lasercutter\\scripts\\lasercuttergamemode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6226ECFD-D822-4835-92A1-2CBDA91FD781}|3D Sand Prototype.csproj|solutionrelative:assets\\lasercutter\\scripts\\lasercuttergamemode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6226ECFD-D822-4835-92A1-2CBDA91FD781}|3D Sand Prototype.csproj|c:\\users\\dracyen\\documents\\projects\\godot\\prototypes\\assets\\general\\scripts\\managers\\gamemodemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6226ECFD-D822-4835-92A1-2CBDA91FD781}|3D Sand Prototype.csproj|solutionrelative:assets\\general\\scripts\\managers\\gamemodemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6226ECFD-D822-4835-92A1-2CBDA91FD781}|3D Sand Prototype.csproj|c:\\users\\dracyen\\documents\\projects\\godot\\prototypes\\assets\\movementlevel\\scripts\\movementtestgamemode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6226ECFD-D822-4835-92A1-2CBDA91FD781}|3D Sand Prototype.csproj|solutionrelative:assets\\movementlevel\\scripts\\movementtestgamemode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6226ECFD-D822-4835-92A1-2CBDA91FD781}|3D Sand Prototype.csproj|c:\\users\\dracyen\\documents\\projects\\godot\\prototypes\\assets\\voxelbox\\scripts\\voxelboxinputstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6226ECFD-D822-4835-92A1-2CBDA91FD781}|3D Sand Prototype.csproj|solutionrelative:assets\\voxelbox\\scripts\\voxelboxinputstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6226ECFD-D822-4835-92A1-2CBDA91FD781}|3D Sand Prototype.csproj|c:\\users\\dracyen\\documents\\projects\\godot\\prototypes\\assets\\movementlevel\\scripts\\movementtestinputstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6226ECFD-D822-4835-92A1-2CBDA91FD781}|3D Sand Prototype.csproj|solutionrelative:assets\\movementlevel\\scripts\\movementtestinputstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6226ECFD-D822-4835-92A1-2CBDA91FD781}|3D Sand Prototype.csproj|c:\\users\\dracyen\\documents\\projects\\godot\\prototypes\\assets\\general\\scripts\\gamemode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6226ECFD-D822-4835-92A1-2CBDA91FD781}|3D Sand Prototype.csproj|solutionrelative:assets\\general\\scripts\\gamemode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
-      "VerticalTabListWidth": 198,
+      "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GameUtilities.cs",
-              "DocumentMoniker": "C:\\Users\\Dracyen\\Documents\\Projects\\Godot\\Prototypes\\Assets\\General\\Scripts\\GameUtilities.cs",
-              "RelativeDocumentMoniker": "Assets\\General\\Scripts\\GameUtilities.cs",
-              "ToolTip": "C:\\Users\\Dracyen\\Documents\\Projects\\Godot\\Prototypes\\Assets\\General\\Scripts\\GameUtilities.cs",
-              "RelativeToolTip": "Assets\\General\\Scripts\\GameUtilities.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "SandboxGamemode.cs",
+              "DocumentMoniker": "C:\\Users\\Dracyen\\Documents\\Projects\\Godot\\Prototypes\\Assets\\VoxelBox\\Scripts\\SandboxGamemode.cs",
+              "RelativeDocumentMoniker": "Assets\\VoxelBox\\Scripts\\SandboxGamemode.cs",
+              "ToolTip": "C:\\Users\\Dracyen\\Documents\\Projects\\Godot\\Prototypes\\Assets\\VoxelBox\\Scripts\\SandboxGamemode.cs",
+              "RelativeToolTip": "Assets\\VoxelBox\\Scripts\\SandboxGamemode.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2023-12-12T17:00:09.217Z",
-              "IsPinned": true,
+              "WhenOpened": "2025-06-21T22:59:37.207Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Gamemode.cs",
-              "DocumentMoniker": "C:\\Users\\Dracyen\\Documents\\Projects\\Godot\\Prototypes\\Assets\\General\\Scripts\\Gamemode.cs",
-              "RelativeDocumentMoniker": "Assets\\General\\Scripts\\Gamemode.cs",
-              "ToolTip": "C:\\Users\\Dracyen\\Documents\\Projects\\Godot\\Prototypes\\Assets\\General\\Scripts\\Gamemode.cs",
-              "RelativeToolTip": "Assets\\General\\Scripts\\Gamemode.cs",
-              "ViewState": "AgIAAGQAAAAAAAAAAAAMwHIAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T18:01:09.486Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "HordeFighterInputState.cs",
               "DocumentMoniker": "C:\\Users\\Dracyen\\Documents\\Projects\\Godot\\Prototypes\\Assets\\HordeFighter\\Scripts\\HordeFighterInputState.cs",
               "RelativeDocumentMoniker": "Assets\\HordeFighter\\Scripts\\HordeFighterInputState.cs",
               "ToolTip": "C:\\Users\\Dracyen\\Documents\\Projects\\Godot\\Prototypes\\Assets\\HordeFighter\\Scripts\\HordeFighterInputState.cs",
               "RelativeToolTip": "Assets\\HordeFighter\\Scripts\\HordeFighterInputState.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T00:31:10.312Z",
+              "WhenOpened": "2025-06-21T01:25:01.165Z",
               "EditorCaption": ""
             },
             {
@@ -100,84 +62,22 @@
               "RelativeDocumentMoniker": "Assets\\HordeFighter\\Scripts\\HordeFighterGamemode.cs",
               "ToolTip": "C:\\Users\\Dracyen\\Documents\\Projects\\Godot\\Prototypes\\Assets\\HordeFighter\\Scripts\\HordeFighterGamemode.cs",
               "RelativeToolTip": "Assets\\HordeFighter\\Scripts\\HordeFighterGamemode.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-22T17:25:42.566Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LaserCutterGamemode.cs",
-              "DocumentMoniker": "C:\\Users\\Dracyen\\Documents\\Projects\\Godot\\Prototypes\\Assets\\LaserCutter\\Scripts\\LaserCutterGamemode.cs",
-              "RelativeDocumentMoniker": "Assets\\LaserCutter\\Scripts\\LaserCutterGamemode.cs",
-              "ToolTip": "C:\\Users\\Dracyen\\Documents\\Projects\\Godot\\Prototypes\\Assets\\LaserCutter\\Scripts\\LaserCutterGamemode.cs",
-              "RelativeToolTip": "Assets\\LaserCutter\\Scripts\\LaserCutterGamemode.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T20:16:47.915Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GamemodeManager.cs",
-              "DocumentMoniker": "C:\\Users\\Dracyen\\Documents\\Projects\\Godot\\Prototypes\\Assets\\General\\Scripts\\Managers\\GamemodeManager.cs",
-              "RelativeDocumentMoniker": "Assets\\General\\Scripts\\Managers\\GamemodeManager.cs",
-              "ToolTip": "C:\\Users\\Dracyen\\Documents\\Projects\\Godot\\Prototypes\\Assets\\General\\Scripts\\Managers\\GamemodeManager.cs",
-              "RelativeToolTip": "Assets\\General\\Scripts\\Managers\\GamemodeManager.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAwwBAAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T18:59:51.829Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MovementTestGamemode.cs",
-              "DocumentMoniker": "C:\\Users\\Dracyen\\Documents\\Projects\\Godot\\Prototypes\\Assets\\MovementLevel\\Scripts\\MovementTestGamemode.cs",
-              "RelativeDocumentMoniker": "Assets\\MovementLevel\\Scripts\\MovementTestGamemode.cs",
-              "ToolTip": "C:\\Users\\Dracyen\\Documents\\Projects\\Godot\\Prototypes\\Assets\\MovementLevel\\Scripts\\MovementTestGamemode.cs",
-              "RelativeToolTip": "Assets\\MovementLevel\\Scripts\\MovementTestGamemode.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T18:57:30.322Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "MovementTestInputState.cs",
-              "DocumentMoniker": "C:\\Users\\Dracyen\\Documents\\Projects\\Godot\\Prototypes\\Assets\\MovementLevel\\Scripts\\MovementTestInputState.cs",
-              "RelativeDocumentMoniker": "Assets\\MovementLevel\\Scripts\\MovementTestInputState.cs",
-              "ToolTip": "C:\\Users\\Dracyen\\Documents\\Projects\\Godot\\Prototypes\\Assets\\MovementLevel\\Scripts\\MovementTestInputState.cs",
-              "RelativeToolTip": "Assets\\MovementLevel\\Scripts\\MovementTestInputState.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T14:47:27.045Z",
+              "WhenOpened": "2025-06-21T01:23:53.436Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "SandboxGamemode.cs",
-              "DocumentMoniker": "C:\\Users\\Dracyen\\Documents\\Projects\\Godot\\Prototypes\\Assets\\VoxelBox\\Scripts\\SandboxGamemode.cs",
-              "RelativeDocumentMoniker": "Assets\\VoxelBox\\Scripts\\SandboxGamemode.cs",
-              "ToolTip": "C:\\Users\\Dracyen\\Documents\\Projects\\Godot\\Prototypes\\Assets\\VoxelBox\\Scripts\\SandboxGamemode.cs",
-              "RelativeToolTip": "Assets\\VoxelBox\\Scripts\\SandboxGamemode.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAIAAAAAAAAAA==",
+              "Title": "GroundedMovementManager.cs",
+              "DocumentMoniker": "C:\\Users\\Dracyen\\Documents\\Projects\\Godot\\Prototypes\\Assets\\HordeFighter\\Scripts\\GroundedMovementManager.cs",
+              "RelativeDocumentMoniker": "Assets\\HordeFighter\\Scripts\\GroundedMovementManager.cs",
+              "ToolTip": "C:\\Users\\Dracyen\\Documents\\Projects\\Godot\\Prototypes\\Assets\\HordeFighter\\Scripts\\GroundedMovementManager.cs",
+              "RelativeToolTip": "Assets\\HordeFighter\\Scripts\\GroundedMovementManager.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwB8AAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T18:57:11.876Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "VoxelBoxInputState.cs",
-              "DocumentMoniker": "C:\\Users\\Dracyen\\Documents\\Projects\\Godot\\Prototypes\\Assets\\VoxelBox\\Scripts\\VoxelBoxInputState.cs",
-              "RelativeDocumentMoniker": "Assets\\VoxelBox\\Scripts\\VoxelBoxInputState.cs",
-              "ToolTip": "C:\\Users\\Dracyen\\Documents\\Projects\\Godot\\Prototypes\\Assets\\VoxelBox\\Scripts\\VoxelBoxInputState.cs",
-              "RelativeToolTip": "Assets\\VoxelBox\\Scripts\\VoxelBoxInputState.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T18:56:09.029Z",
+              "WhenOpened": "2025-06-17T00:50:14.031Z",
               "EditorCaption": ""
             }
           ]

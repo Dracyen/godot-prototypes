@@ -1,8 +1,8 @@
 using Godot;
 using System;
-using MovementTestUtilities;
+using HordeFighterUtilities;
 
-public partial class MovementTestInputState : InputState
+public partial class JumpManInputState : InputState
 {
     public override void Move(Vector2 force)
     {

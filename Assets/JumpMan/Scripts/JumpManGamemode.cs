@@ -2,11 +2,11 @@ using Godot;
 using System.Diagnostics;
 using HordeFighterUtilities;
 
-public partial class HordeFighterGamemode : Gamemode
+public partial class JumpManGamemode : Gamemode
 {
     public override void _Ready()
     {
-        ActiveInputState = new MovementTestInputState();
+        ActiveInputState = new JumpManInputState();
 
         GameActions.TogglePauseMenu += TogglePauseMenuImpl;
     }

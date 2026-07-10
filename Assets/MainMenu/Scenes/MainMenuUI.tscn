@@ -1,13 +1,119 @@
-[gd_scene load_steps=9 format=3 uid="uid://biy7w1tm78nbo"]
+[gd_scene load_steps=21 format=3 uid="uid://biy7w1tm78nbo"]
 
 [ext_resource type="Texture2D" uid="uid://ca8habjn8fdnj" path="res://Assets/General/Sprites/iconNormal.svg" id="1_lstpl"]
 [ext_resource type="Texture2D" uid="uid://868v2cf3ukld" path="res://Assets/General/Sprites/iconPressed.svg" id="2_ifbey"]
 [ext_resource type="Texture2D" uid="uid://b4cqa82utkgnq" path="res://Assets/General/Sprites/iconHovered.svg" id="3_6t7h3"]
-[ext_resource type="Script" path="res://Assets/MainMenu/Scripts/Tools/LevelButton.cs" id="4_45rkv"]
+[ext_resource type="Script" uid="uid://qm22qwnaylvw" path="res://Assets/MainMenu/Scripts/Tools/LevelButton.cs" id="4_45rkv"]
 [ext_resource type="PackedScene" uid="uid://2gk1clj1igde" path="res://Assets/VoxelBox/Scenes/LS_Voxelbox.tscn" id="5_yn377"]
-[ext_resource type="PackedScene" uid="uid://yyyqo61m0kes" path="res://Assets/MovementLevel/Scenes/LS_MovementTest.tscn" id="6_tq2df"]
+[ext_resource type="Material" uid="uid://nnshse7o6rkj" path="res://Assets/VoxelBox/Materials/M_Ground.tres" id="6_i5ql1"]
 [ext_resource type="PackedScene" uid="uid://cuk48c7clg5y2" path="res://Assets/LaserCutter/Scenes/LS_LaserCutter.tscn" id="7_c456c"]
-[ext_resource type="PackedScene" uid="uid://te4b8p5t5fao" path="res://Assets/HordeFighter/Scenes/LS_HordeTest.tscn" id="8_ugey0"]
+[ext_resource type="Material" uid="uid://ba8gfnxf21q3a" path="res://Assets/VoxelBox/Materials/M_Skybox.tres" id="7_iaaxe"]
+[ext_resource type="PackedScene" uid="uid://te4b8p5t5fao" path="res://Assets/JumpMan/Scenes/LS_JumpMan.tscn" id="8_ugey0"]
+
+[sub_resource type="CSharpScript" id="CSharpScript_ailbc"]
+script/source = "using Godot;
+using System.Diagnostics;
+using MovementTestUtilities;
+
+public partial class MovementTestGamemode : Gamemode
+{
+    public override void _Ready()
+    {
+        ActiveInputState = new MovementTestInputState();
+
+        GameActions.TogglePauseMenu += TogglePauseMenuImpl;
+    }
+
+    public void TogglePauseMenuImpl()
+    {
+        GamemodeManager.Instance.UnloadScene();
+    }
+
+    public override void _ExitTree()
+    {
+        GameActions.TogglePauseMenu -= TogglePauseMenuImpl;
+    }
+}
+"
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_cayjw"]
+bounce = 1.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_ejsjr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_glgf0"]
+
+[sub_resource type="CSharpScript" id="CSharpScript_d73ih"]
+script/source = "using Godot;
+using System;
+using MovementTestUtilities;
+
+public partial class PlayerMovementManager : RigidBody3D
+{
+    [Export]
+    private float Speed;
+
+    public override void _Ready()
+	{
+        GameActions.Move += Move;
+	}
+
+    public void Move(Vector2 axis)
+    {
+        Vector3 axis3D = new Vector3();
+
+        axis3D.X = axis.X * -Speed;
+        axis3D.Z = axis.Y * -Speed;
+
+        ApplyCentralForce(axis3D);
+    }
+
+    public override void _ExitTree()
+    {
+        GameActions.Move -= Move;
+    }
+}
+"
+
+[sub_resource type="SphereMesh" id="SphereMesh_bhvbk"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_2vj28"]
+
+[sub_resource type="PackedScene" id="PackedScene_f4u60"]
+_bundled = {
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"names": PackedStringArray("RB3D_Ball", "RigidBody3D", "transform", "mass", "script", "Speed", "MeshInstance3D", "MeshInstance3D", "mesh", "CollisionShape3D", "CollisionShape3D", "shape"),
+"node_count": 3,
+"node_paths": [NodePath("."), NodePath(".")],
+"nodes": PackedInt32Array(-1, -1, 1, 0, -1, 4, 2, 0, 3, 1, 4, 2, 5, 3, 0, 1073741824, 0, 7, 6, -1, 1, 8, 4, 0, 1073741825, 0, 10, 9, -1, 1, 11, 5, 0),
+"variants": [Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.59874, 0), 20.0, SubResource("CSharpScript_d73ih"), 50.0, SubResource("SphereMesh_bhvbk"), SubResource("SphereShape3D_2vj28")],
+"version": 3
+}
+
+[sub_resource type="Environment" id="Environment_n3jxu"]
+background_mode = 2
+background_color = Color(0.937255, 0.937255, 0.937255, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.85098, 0.780392, 0.698039, 1)
+reflected_light_source = 2
+
+[sub_resource type="SphereMesh" id="SphereMesh_qh2kx"]
+flip_faces = true
+
+[sub_resource type="PackedScene" id="PackedScene_ptaxb"]
+_bundled = {
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"names": PackedStringArray("LevelParent", "Node3D", "script", "SB3D_Ground", "StaticBody3D", "physics_material_override", "MeshInstance3D", "MeshInstance3D", "transform", "material_override", "mesh", "skeleton", "CollisionShape3D", "CollisionShape3D", "transform", "shape", "RB3D_Ball", "Camera3D", "Camera3D", "transform", "environment", "fov", "DirectionalLight3D", "DirectionalLight3D", "transform", "MI3D_Skybox", "MeshInstance3D", "transform", "material_override", "mesh", "skeleton"),
+"node_count": 8,
+"node_paths": [NodePath("."), NodePath("./SB3D_Ground"), NodePath("./SB3D_Ground"), NodePath("."), NodePath("."), NodePath("."), NodePath(".")],
+"nodes": PackedInt32Array(-1, -1, 1, 0, -1, 1, 2, 0, 0, 1073741824, 0, 4, 3, -1, 1, 5, 1, 0, 1073741825, 0, 7, 6, -1, 4, 8, 2, 9, 3, 10, 4, 11, 5, 0, 1073741826, 0, 13, 12, -1, 2, 14, 6, 15, 7, 0, 1073741827, 0, 2147483647, 16, 8, 0, 0, 1073741828, 0, 18, 17, -1, 3, 19, 9, 20, 10, 21, 11, 0, 1073741829, 0, 23, 22, -1, 1, 24, 12, 0, 1073741830, 0, 26, 25, -1, 4, 27, 13, 28, 14, 29, 15, 30, 16, 0),
+"variants": [SubResource("CSharpScript_ailbc"), SubResource("PhysicsMaterial_cayjw"), Transform3D(10, 0, 0, 0, 0.5, 0, 0, 0, 10, 0, -0.25, 0), ExtResource("6_i5ql1"), SubResource("BoxMesh_ejsjr"), NodePath("../../.."), Transform3D(10, 0, 0, 0, 0.5, 0, 0, 0, 10, 0, -0.25, 0), SubResource("BoxShape3D_glgf0"), SubResource("PackedScene_f4u60"), Transform3D(-4.2222e-08, -0.258819, 0.965926, -1.13133e-08, 0.965926, 0.258819, -1, 4.61853e-14, -4.37114e-08, 10, 5, 0), SubResource("Environment_n3jxu"), 90.0, Transform3D(1, 0, 0, 0, 0.258819, 0.965926, 0, -0.965926, 0.258819, 5, 5, 5), Transform3D(1000, 0, 0, 0, 1000, 0, 0, 0, 1000, 0, 0, 0), ExtResource("7_iaaxe"), SubResource("SphereMesh_qh2kx"), NodePath("../..")],
+"version": 3
+}
 
 [node name="CT_MainMenuUI" type="Control"]
 layout_mode = 3
@@ -48,6 +154,7 @@ text = "VoxelBox"
 horizontal_alignment = 1
 
 [node name="LevelButton02" type="TextureButton" parent="GridContainer"]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
@@ -55,7 +162,7 @@ texture_normal = ExtResource("1_lstpl")
 texture_pressed = ExtResource("2_ifbey")
 texture_hover = ExtResource("3_6t7h3")
 script = ExtResource("4_45rkv")
-targetScene = ExtResource("6_tq2df")
+targetScene = SubResource("PackedScene_ptaxb")
 
 [node name="Label" type="Label" parent="GridContainer/LevelButton02"]
 layout_mode = 1
@@ -101,7 +208,7 @@ anchors_preset = -1
 anchor_top = 1.112
 anchor_right = 1.0
 anchor_bottom = 1.339
-text = "Horde Fighter"
+text = "JumpMan"
 horizontal_alignment = 1
 
 [connection signal="pressed" from="GridContainer/LevelButton01" to="GridContainer/LevelButton01" method="LoadScene"]

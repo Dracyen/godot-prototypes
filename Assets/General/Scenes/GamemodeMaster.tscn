@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://laiccc4us4rc"]
 
-[ext_resource type="Script" path="res://Assets/General/Scripts/Managers/GamemodeManager.cs" id="1_2o3h1"]
+[ext_resource type="Script" uid="uid://5o12j3ndup6o" path="res://Assets/General/Scripts/Managers/GamemodeManager.cs" id="1_2o3h1"]
 [ext_resource type="PackedScene" uid="uid://biy7w1tm78nbo" path="res://Assets/MainMenu/Scenes/MainMenuUI.tscn" id="2_4hjqm"]
 
 [node name="GamemodeMaster" type="Node3D" node_paths=PackedStringArray("MainMenu")]

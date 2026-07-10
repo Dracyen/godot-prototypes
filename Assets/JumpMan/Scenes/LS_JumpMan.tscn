@@ -1,0 +1,163 @@
+[gd_scene load_steps=20 format=3 uid="uid://te4b8p5t5fao"]
+
+[ext_resource type="Script" uid="uid://dxuvw72a1wcy0" path="res://Assets/JumpMan/Scripts/JumpManGamemode.cs" id="1_2ukye"]
+[ext_resource type="Material" uid="uid://nnshse7o6rkj" path="res://Assets/VoxelBox/Materials/M_Ground.tres" id="2_1md3b"]
+[ext_resource type="Material" uid="uid://ba8gfnxf21q3a" path="res://Assets/VoxelBox/Materials/M_Skybox.tres" id="3_acpxr"]
+[ext_resource type="Script" uid="uid://miv10socebcs" path="res://Assets/JumpMan/Scripts/GroundedMovementManager.cs" id="4_n2agm"]
+[ext_resource type="Animation" uid="uid://dfgutekg6lr4v" path="res://Assets/JumpMan/Animations/idle_animation.res" id="5_no3vw"]
+[ext_resource type="Animation" uid="uid://bf8hijl2cxyl2" path="res://Assets/JumpMan/Animations/walk_animation.res" id="6_7sbdq"]
+[ext_resource type="Material" uid="uid://dtgepulbglkqq" path="res://Assets/JumpMan/Materials/Enemy_1_Material.tres" id="7_214y0"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_cayjw"]
+bounce = 1.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_ejsjr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_glgf0"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_kax71"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e0g6y"]
+
+[sub_resource type="Environment" id="Environment_n3jxu"]
+background_mode = 2
+background_color = Color(0.937255, 0.937255, 0.937255, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.85098, 0.780392, 0.698039, 1)
+reflected_light_source = 2
+
+[sub_resource type="SphereMesh" id="SphereMesh_qh2kx"]
+flip_faces = true
+
+[sub_resource type="Animation" id="Animation_7l5o2"]
+length = 0.001
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sdepb"]
+_data = {
+&"RESET": SubResource("Animation_7l5o2"),
+&"idle_animation": ExtResource("5_no3vw"),
+&"walk_animation": ExtResource("6_7sbdq")
+}
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_he8j3"]
+material = ExtResource("7_214y0")
+height = 1.5
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kax71"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_keytk"]
+material = ExtResource("7_214y0")
+radius = 0.225
+height = 0.75
+
+[node name="LevelParent" type="Node3D"]
+script = ExtResource("1_2ukye")
+
+[node name="SB3D_Ground" type="StaticBody3D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_cayjw")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="SB3D_Ground"]
+transform = Transform3D(50, 0, 0, 0, 0.5, 0, 0, 0, 50, 0, -0.25, 0)
+material_override = ExtResource("2_1md3b")
+mesh = SubResource("BoxMesh_ejsjr")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SB3D_Ground"]
+transform = Transform3D(50, 0, 0, 0, 0.5, 0, 0, 0, 50, 0, -0.25, 0)
+shape = SubResource("BoxShape3D_glgf0")
+
+[node name="SB3D_Obstacle" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 3.5)
+physics_material_override = SubResource("PhysicsMaterial_cayjw")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="SB3D_Obstacle"]
+material_override = ExtResource("2_1md3b")
+mesh = SubResource("BoxMesh_ejsjr")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SB3D_Obstacle"]
+shape = SubResource("BoxShape3D_glgf0")
+
+[node name="SB3D_Obstacle2" type="StaticBody3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 1.41421, -1.41421, 0, 1.41421, 1.41421, 0, 0, -4)
+physics_material_override = SubResource("PhysicsMaterial_cayjw")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="SB3D_Obstacle2"]
+material_override = ExtResource("2_1md3b")
+mesh = SubResource("BoxMesh_kax71")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SB3D_Obstacle2"]
+shape = SubResource("BoxShape3D_e0g6y")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-4.2222e-08, -0.258819, 0.965926, -1.13133e-08, 0.965926, 0.258819, -1, 4.61853e-14, -4.37114e-08, 10, 5, 0)
+environment = SubResource("Environment_n3jxu")
+fov = 90.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.258819, 0.965926, 0, -0.965926, 0.258819, 5, 5, 5)
+
+[node name="MI3D_Skybox" type="MeshInstance3D" parent="."]
+transform = Transform3D(1000, 0, 0, 0, 1000, 0, 0, 0, 1000, 0, 0, 0)
+visible = false
+material_override = ExtResource("3_acpxr")
+mesh = SubResource("SphereMesh_qh2kx")
+skeleton = NodePath("../..")
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+script = ExtResource("4_n2agm")
+Speed = 12.5
+Friction = 100.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody3D"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_sdepb")
+}
+speed_scale = 2.0
+
+[node name="Mesh_Body" type="MeshInstance3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+mesh = SubResource("CapsuleMesh_he8j3")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+shape = SubResource("CapsuleShape3D_kax71")
+
+[node name="Pivot_Body" type="Node3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+
+[node name="Pivot_Left_Leg" type="Node3D" parent="CharacterBody3D/Pivot_Body"]
+transform = Transform3D(1, 0, 0, 0, 0.995065, 0.099220894, 0, -0.099220894, 0.995065, -0.255, -0.475, 0)
+
+[node name="Mesh_Left_Leg" type="MeshInstance3D" parent="CharacterBody3D/Pivot_Body/Pivot_Left_Leg"]
+transform = Transform3D(0.9, 0, 0, 0, 1, 0, 0, 0, 0.9, 0, -0.15, 0)
+mesh = SubResource("CapsuleMesh_keytk")
+skeleton = NodePath("../../../../..")
+
+[node name="Pivot_Right_Leg" type="Node3D" parent="CharacterBody3D/Pivot_Body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.255, -0.475, 0)
+
+[node name="Mesh_Right_Leg" type="MeshInstance3D" parent="CharacterBody3D/Pivot_Body/Pivot_Right_Leg"]
+transform = Transform3D(0.9, 0, 0, 0, 1, 0, 0, 0, 0.9, 0, -0.15, 0)
+mesh = SubResource("CapsuleMesh_keytk")
+skeleton = NodePath("../../../../..")
+
+[node name="Pivot_Left_Arm" type="Node3D" parent="CharacterBody3D/Pivot_Body"]
+transform = Transform3D(0.69282, 0.4, 0, -0.4, 0.69282, 0, 0, 0, 0.8, -0.45, -0.15, 0)
+
+[node name="Mesh_Left_Arm" type="MeshInstance3D" parent="CharacterBody3D/Pivot_Body/Pivot_Left_Arm"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.15, 0)
+mesh = SubResource("CapsuleMesh_keytk")
+skeleton = NodePath("../../../../..")
+
+[node name="Pivot_Right_Arm" type="Node3D" parent="CharacterBody3D/Pivot_Body"]
+transform = Transform3D(0.69282, -0.4, 0, 0.4, 0.69282, 0, 0, 0, 0.8, 0.45, -0.15, 0)
+
+[node name="Mesh_Right_Arm" type="MeshInstance3D" parent="CharacterBody3D/Pivot_Body/Pivot_Right_Arm"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.15, 0)
+mesh = SubResource("CapsuleMesh_keytk")
+skeleton = NodePath("../../../../..")

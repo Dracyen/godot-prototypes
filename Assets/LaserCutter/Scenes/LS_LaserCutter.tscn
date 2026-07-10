@@ -1,8 +1,8 @@
 [gd_scene load_steps=11 format=3 uid="uid://cuk48c7clg5y2"]
 
-[ext_resource type="Script" path="res://Assets/LaserCutter/Scripts/LaserCutterGamemode.cs" id="1_mj0xm"]
+[ext_resource type="Script" uid="uid://bu4y2alv5qfwm" path="res://Assets/LaserCutter/Scripts/LaserCutterGamemode.cs" id="1_mj0xm"]
 [ext_resource type="Material" uid="uid://nnshse7o6rkj" path="res://Assets/VoxelBox/Materials/M_Ground.tres" id="2_uve4x"]
-[ext_resource type="Script" path="res://Assets/LaserCutter/Scripts/FloatingMovementManager.cs" id="4_5qclx"]
+[ext_resource type="Script" uid="uid://bkfsgf7hnauo0" path="res://Assets/LaserCutter/Scripts/FloatingMovementManager.cs" id="4_5qclx"]
 [ext_resource type="Material" uid="uid://ba8gfnxf21q3a" path="res://Assets/VoxelBox/Materials/M_Skybox.tres" id="4_tu125"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_cayjw"]

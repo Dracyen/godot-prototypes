@@ -59,16 +59,6 @@ namespace VoxelBoxUtilities
     }
 }
 
-namespace MovementTestUtilities
-{
-    public class GameActions
-    {
-        public static Action<Vector2> Move;
-
-        public static Action TogglePauseMenu;
-    }
-}
-
 namespace LaserCutterUtilities
 {
     public class GameActions
