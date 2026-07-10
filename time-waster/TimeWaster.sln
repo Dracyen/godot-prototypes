@@ -1,0 +1,19 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeWaster", "TimeWaster.csproj", "{FF230AD9-9F94-4C7B-9549-AAD6EAC16332}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	Debug|Any CPU = Debug|Any CPU
+	ExportDebug|Any CPU = ExportDebug|Any CPU
+	ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF230AD9-9F94-4C7B-9549-AAD6EAC16332}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF230AD9-9F94-4C7B-9549-AAD6EAC16332}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF230AD9-9F94-4C7B-9549-AAD6EAC16332}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{FF230AD9-9F94-4C7B-9549-AAD6EAC16332}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{FF230AD9-9F94-4C7B-9549-AAD6EAC16332}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{FF230AD9-9F94-4C7B-9549-AAD6EAC16332}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+EndGlobal
